@@ -8,7 +8,7 @@ pages in a book
 from typing import Tuple
 
 
-def index_range(page: int, page_size: int) -> int:
+def index_range(page: int, page_size: int) -> Tuple[Tuple]:
     """ Function that reads the number of a page
     page: (int) - number of page
     page_size: (int) - total page size
