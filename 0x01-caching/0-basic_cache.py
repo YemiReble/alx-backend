@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-""" BaseCaching module
+""" BaseCaching module is a caching system class
+    with subclass that inherit from it
 """
 
 
