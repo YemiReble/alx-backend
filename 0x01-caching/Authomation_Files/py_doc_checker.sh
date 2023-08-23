@@ -12,7 +12,7 @@ python3 -c 'print(__import__("'$file'").__doc__)'
 echo "----------------------------------------------------------------"
 python3 -c 'print(__import__("'$file'").'$funct'.__doc__)' 
 echo "----------------------------------------------------------------"
-#python3 -c 'print(__import__("'$file'").MyClass.my_function.__doc__)'
-#echo "----------------------------------------------------------------"
-#python -c 'print(__import__("'$file'").MyClass.__doc__)'
+python3 -c 'print(__import__("'$file'").MyClass.my_function.__doc__)'
+echo "----------------------------------------------------------------"
+python -c 'print(__import__("'$file'").MyClass.__doc__)'
 
