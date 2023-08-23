@@ -27,23 +27,31 @@ class BaseCaching():
         """
         self.key = key
         self.item = item
-        if self.key is None:
-            return
+        try:
+            if self.key is None:
+                return
 
-        new_data = {self.key: self.item}
-        new_data[self.key] = self.item
-        return self.cache_data.update(new_data)
-        # self.cache_data.append(new_data)
+            new_data = {self.key: self.item}
+            new_data[self.key] = self.item
+            return self.cache_data.update(new_data)
+            # self.cache_data.append(new_data)
+        except Exception:
+            raise NotImplementedError(
+                "put must be implemented in your cache class")
 
     def get(self, key):
         """ Get an item by key
         """
         self.key = key
-        if self.key is None or self.key not in self.cache_data:
-            return None
+        try:
+            if self.key is None or self.key not in self.cache_data:
+                return None
 
-        for keys in self.cache_data:
-            return self.cache_data[key]
+            for keys in self.cache_data:
+                return self.cache_data[key]
+        except Exception:
+            raise NotImplementedError(
+                "get must be implemented in your cache class")
 
 
 class BasicCache(BaseCaching):
