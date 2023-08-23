@@ -25,6 +25,24 @@ class BaseCaching():
     def put(self, key, item):
         """ Add an item in the cache
         """
+        raise NotImplementedError(
+            "put must be implemented in your cache class")
+
+    def get(self, key):
+        """ Get an item by key
+        """
+        raise NotImplementedError(
+            "get must be implemented in your cache class")
+
+
+class BasicCache(BaseCaching):
+    """ BasicCache is a class that inherit
+        from BaseChasing as seen
+    """
+
+    def put(self, key, item):
+        """ Add an item in the cache
+        """
         self.key = key
         self.item = item
         try:
@@ -52,10 +70,3 @@ class BaseCaching():
         except Exception:
             raise NotImplementedError(
                 "get must be implemented in your cache class")
-
-
-class BasicCache(BaseCaching):
-    """ BasicCache is a class that inherit
-        from BaseChasing as seen
-    """
-    pass
