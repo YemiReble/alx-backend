@@ -23,7 +23,7 @@ class BasicCache(BaseCaching):
         """
         self.key = key
         self.item = item
-        if self.key is None and self.item is None:
+        if self.key is None or self.item is None:
             return
 
         new_data = {self.key: self.item}
