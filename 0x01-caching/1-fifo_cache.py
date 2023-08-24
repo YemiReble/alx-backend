@@ -6,7 +6,8 @@ which is also a caching system
 """
 
 
-BaseCaching = __import__("basecaching").BaseCaching
+# BaseCaching = __import__("basecaching").BaseCaching
+from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
