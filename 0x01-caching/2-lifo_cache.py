@@ -30,7 +30,7 @@ class LIFOCache(BaseCaching):
             # return self.cache_data.update(add_data)
 
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS \
-            and self.key not in self.cache_data.keys():
+                and self.key not in self.cache_data.keys():
             last_key = self.cache_data.popitem()
             # last_key = self.cache_data[4]
             print("DISCARD: {}".format(last_key[0]))
