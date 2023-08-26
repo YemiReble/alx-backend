@@ -53,7 +53,7 @@ class Server:
             'data': Servers.get_page(page, page_size),
             'page_size': page_size,
             'next_index': 3
-            }
+        }
 
         if index >= 0 and page_size > index:
             for index in page_size:
@@ -61,8 +61,7 @@ class Server:
 
     def get(idx: str) -> str:
         """ Get method to get indexes """
-        dataset = self.__indexed_dataset # To be updated to whatever get_hyper returns
+        dataset = self.__indexed_dataset
 
         for string in dataset:
             return string[idx]
-    
