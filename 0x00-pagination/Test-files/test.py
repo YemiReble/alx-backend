@@ -1,5 +1,6 @@
 
-server = __import__("1-simple_pagination").Server
+# server = __import__("1-simple_pagination").Server
+server = __import__("3-hypermedia_del_pagination").Server
 
 
 def add_numbers(a, b):
@@ -16,4 +17,19 @@ def add_numbers(a, b):
 Server = server()
 
 # print(Server.dataset())
-print(Server.get_page())
+# print(Server.indexed_dataset())
+
+less = {
+    'prom': 24,
+    'hello': 'mom',
+    'bye': 2,
+    'wel': 'you are'
+}
+
+
+def get(data, idx: str):
+    for idx2 in data:
+        return idx2[idx]
+
+
+print(less.get("bye"))
