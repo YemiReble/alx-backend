@@ -1,0 +1,14 @@
+# 0x02. i18n
+- [x] Back-end
+- [x] Flask
+- [x] i18n
+
+## Resources
+* Flask-Babel
+* Flask i18n tutorial
+* pytz
+
+## Learning Objectives
+* Learn how to parametrize Flask templates to display different languages
+* Learn how to infer the correct locale based on URL parameters, user settings or request headers
+* Learn how to localize timestamps
