@@ -18,8 +18,8 @@ babel = Babel(app)
 class Config():
     """ Language Translation Class """
     LANGUAGES = ["en", "fr"]
-    default_locale = "en"
-    default_timezone = "UTC"
+    locale = "en"
+    timezone = "UTC"
     time_zone = datetime.datetime.now(pytz.utc)
     # babel = Babel(app)
 
