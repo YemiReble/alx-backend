@@ -16,7 +16,8 @@ babel = Babel(app)
 
 
 class Config():
-    """ Language Translation Class """
+    """ Configuration Class """
+    
     LANGUAGES = ["en", "fr"]
     locale = "en"
     timezone = "UTC"
@@ -27,6 +28,7 @@ class Config():
 @app.route("/")
 def index_one():
     """ App Index page """
+    
     locale = Config.locale
     time_zone = format_datetime(Config.time_zone)
     return render_template("1-index.html", locale=locale, time_zone=time_zone)
